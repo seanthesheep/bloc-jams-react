@@ -159,10 +159,10 @@ class Album extends Component {
               {
                 this.state.album.songs.map( (song, index) =>
                 <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-                  <td onMouseEnter={() => this.toggleHoverPlayOn(song)} onMouseLeave={this.toggleHoverPlayOff}>
+                  <td width="15%" onMouseEnter={() => this.toggleHoverPlayOn(song)} onMouseLeave={this.toggleHoverPlayOff}>
                   {this.isPlaying(song,index)}</td>
-                  <td onMouseEnter={() => this.toggleHoverPlayOn(song)} onMouseLeave={this.toggleHoverPlayOff}>{song.title}</td>
-                  <td onMouseEnter={() => this.toggleHoverPlayOn(song)} onMouseLeave={this.toggleHoverPlayOff}>{this.formatTime(song.duration)}</td>
+                  <td width="30%" onMouseEnter={() => this.toggleHoverPlayOn(song)} onMouseLeave={this.toggleHoverPlayOff}>{song.title}</td>
+                  <td width="15%" onMouseEnter={() => this.toggleHoverPlayOn(song)} onMouseLeave={this.toggleHoverPlayOff}>{this.formatTime(song.duration)}</td>
                 </tr>
                 )
               }
@@ -179,7 +179,7 @@ class Album extends Component {
            handleNextClick={() => this.handleNextClick()}
            handleTimeChange={(e) => this.handleTimeChange(e)}
            handleVolumeChange={(e) => this.handleVolumeChange(e)}
-           formatTime={(t) => this.formatTime(t)} 
+           formatTime={(t) => this.formatTime(t)}
          />
       </section>
     );
