@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 
-const itemStyle = {
-
-}
 
 class Album extends Component {
   constructor(props){
